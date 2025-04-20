@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1745176872 source:d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\src\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+
+1745176436 d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\include\hotdog.h
+	"Nodo.h"
+
+1745182117 d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\include\nodo.h
+	<iostream>
+	<string>
+
+1745176643 source:d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\src\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1745179681 source:d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1745181812 source:d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\src\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1745181356 d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\include\empleado.h
+	"Nodo.h"
+	<string>
+	<iostream>
+
+1745179432 d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\include\gerente.h
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1745181772 source:d:\stuff\escuela\trabajos\info 4to\hotdog-main2\hotdogs\src\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+
