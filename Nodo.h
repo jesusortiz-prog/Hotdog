@@ -9,11 +9,16 @@ using namespace std;
 class Nodo
 {
     public:
-        Nodo(int elemento);
+        Nodo();
         int getElemento();
+        //string getNombre(); //no jalo
+        string nombre;//chuy le puso nombre al nodo
         Nodo *sig;
+        Nodo *ant;
     private:
         int elemento;
+
+
 
 };
 

@@ -1,5 +1,7 @@
 #include "Hotdog.h" //para clase hotdog
 #include "Nodo.h" //para clase nodo
+#include "Empleado.h" //para clase empleado
+#include "Gerente.h"
 #include <string>
 #include <iostream>
 
@@ -7,39 +9,30 @@
 using namespace std;
 
 
-int main()
+int main() //menu del gerente
 {
-    Hotdog instancia;
-    int opc, cantidadSalchicas;
-    do{
-        cout<<"Menu de carrito de perritos calientes\n1)Insertar\n2)Mostrar\n3)Eliminar\n4)salir."<<endl;
-        cin>>opc;
-        system("cls");
-        switch(opc){
-            case 1:{
-                cout<<"Ingrese la cantidad de salchicas para poner en el inventario: "<<endl;
-                cin>>cantidadSalchicas;
-                instancia.ingresarSalchicas(cantidadSalchicas);
-                break;
-            }
-            case 2:{
-                instancia.mostrarSalchicas();
-                break;
-            }
-            case 3:{
-                instancia.eliminarSalchicas();
-                break;
-            }
-            case 4:{
-                cout<<"Saliendo...\n";
-                break;
-            }
-            default:{
-                cout<<"Opcion no valida\n";
-                break;
-            }
-        }
-    }while(opc!=3);
+    int opcMain;
+    Gerente inst;
 
-    return 0;
+    do{
+        cout<<"Menu principal\n1)Gerente\n2)Empleado\n3)Terminar programa\n"<<endl;
+        cin>>opcMain;
+        system("cls");
+        switch(opcMain)
+        {
+        case 1:
+            inst.menuGerente();
+            break;
+        case 2:
+            inst.empleado.menuEmpleado();
+            break;
+        case 3:
+            cout<<"Saliendo...\n";
+            break;
+        default:
+            cout<<"Opcion no valida"<<endl;
+            break;
+        }
+    }while(opcMain!=3);
 }
+

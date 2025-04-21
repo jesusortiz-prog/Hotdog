@@ -9,17 +9,18 @@ class Hotdog
         Hotdog();
         ~Hotdog();
         bool vacia();
-        void ingresarSalchicas(int elemento); //primero intentare con este
-
-        void ingresarPan();
-        void ingresarKetchup();
+        void ingresarSalchicas(); //primero intentare con este
+        void ingresarPan(); //falta
+        void ingresarKetchup(); //falta
 
         void mostrarInventario(); //pienso mandar a llamar a todos los mostrar()
         void mostrarSalchicas();
+        void mostrarPan();
+        void mostrarKetchup();
 
         void eliminarSalchicas();
-        void eliminarPan();
-        void eliminarKetchup();
+        void eliminarPan(); //falta
+        void eliminarKetchup(); //falta
 
 
     private:
