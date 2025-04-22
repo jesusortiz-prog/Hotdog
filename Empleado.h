@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 
-
+#include "Nodo.h"
 using namespace std;
 
 class Empleado
@@ -24,14 +24,13 @@ class Empleado
 
         void menuEmpleado();
 
-    protected:
-
-    private:
-
+/*
         int fechaIngreso;
         float nomina;
         int idEmpleado;
-        Nodo* inicio;
+        string nombre;
+*/
+        Nodo *inicio;
 };
 
 #endif // EMPLEADO_H

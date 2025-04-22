@@ -34,28 +34,28 @@ bool Empleado::vacia()
     return(inicio==nullptr);
 }
 void Empleado::ingresarEmpleadoFinal()
-{
-    Nodo* nuevo=new Nodo();
-    cout<<"Ingrese nombre: "<<endl;
-    cin>>nuevo->nombre; //NO QUIERE EL HDP
+{   string nombre;
+    int id;
+    cout<<"Ingrese el nombre: "<<endl;
+    cin>>nombre;
+    cout<<"Ingresa la ID: "<<endl;
+    cin>>id;
 
-    if(vacia())
+    Nodo* nuevo=new Nodo(nombre,id);
+
+    if(inicio==nullptr)
     {
+        inicio = nuevo;
+        nuevo->sig = nuevo;
+        nuevo->ant = nuevo;
+    }else{
+        nuevo->sig = inicio;
+        nuevo->ant = inicio->ant;  //esta logica la tenia mal antes hehe, se me hace chistoso que si me jala en el codigo que hicimos en la clase
 
-        nuevo->sig=inicio;
-        nuevo->ant=inicio->ant;
-        inicio->ant=nuevo;
-        nuevo->ant->sig=nuevo;
-        cout<<"Empleado contratado correctamente"<<endl;
-    }
-    else{
-        inicio=nuevo;
-        inicio->sig=inicio;
-        inicio->ant=inicio;
-
-
-        cout<<"Empleado contratado correctamente"<<endl;
-    }
+        inicio->ant->sig = nuevo;
+        inicio->ant = nuevo;
+        }
+    cout<<"Empleado contratado correctamente, nombre: "<<nombre<<",Id: "<<id<<endl;
 }
 void Empleado::eliminarEmpleadoInicio()//eliminarInicio
 {
@@ -86,10 +86,10 @@ void Empleado::mostrarEmpleado()
     }
     else{
         Nodo *aux=inicio;
-        do
-        {
-            cout<<aux->getElemento()<<endl;
-            cout<<"Nombre del empleado: "<<aux->nombre<<endl;
+        do{
+            cout<<"Nombre del empleado: "<<aux->getNombre()<<endl;
+            cout<<"Id del empleado: "<<aux->getId()<<endl;
+            cout<<"----------------------"<<endl;
             aux=aux->sig;
         }while(aux!=inicio);
     }
