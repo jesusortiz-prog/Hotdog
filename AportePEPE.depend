@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1745305502 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.h
+	"Nodo.h"
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.h
+	<iostream>
+	<string>
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.h
+	"Nodo.h"
+	<string>
+	<iostream>
+	"Nodo.h"
+
+1745306092 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1745304488 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+
+1745306026 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	<cstdlib>
+
+1745304488 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1745305058 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+
