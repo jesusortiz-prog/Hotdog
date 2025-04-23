@@ -2,7 +2,8 @@
 #include "Empleado.h"
 
 #include "Hotdog.h"//hotdog
-
+#include "Pan.h"
+#include "Ketchup.h"
 #include <cstdlib>
 Gerente::Gerente()
 {
@@ -58,10 +59,10 @@ void Gerente::subInventario(){
             hotdog.ingresarSalchicas();
             break;
         case 3:
-            hotdog.ingresarPan();
+            Pan().ingresarPanFinal();
             break;
         case 4:
-            hotdog.ingresarKetchup();
+            Ketchup().ingresarKetchupFinal();
             break;
         case 5:
             cout<<"volviendo...\n";

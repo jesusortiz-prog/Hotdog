@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,8 +40,12 @@
 		<Unit filename="Gerente.h" />
 		<Unit filename="Hotdog.cpp" />
 		<Unit filename="Hotdog.h" />
+		<Unit filename="Ketchup.cpp" />
+		<Unit filename="Ketchup.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
+		<Unit filename="Pan.cpp" />
+		<Unit filename="Pan.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

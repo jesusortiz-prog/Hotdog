@@ -1,4 +1,6 @@
 #include "Hotdog.h"
+#include "Pan.h"
+#include "Ketchup.h"
 #include "Nodo.h"
 
 Hotdog::Hotdog()
@@ -99,7 +101,7 @@ void Hotdog::eliminarKetchup(){
 
 void Hotdog::mostrarInventario(){
     mostrarSalchicas();
-    mostrarPan();
-    mostrarKetchup();
+    Pan().mostrarPan();
+    Ketchup().mostrarKetchup();
 }
 

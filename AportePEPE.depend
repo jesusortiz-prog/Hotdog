@@ -27,7 +27,7 @@
 	<string>
 	<iostream>
 
-1745304488 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.cpp
+1745377367 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.cpp
 	"Empleado.h"
 	"Hotdog.h"
 	"Gerente.h"
@@ -36,17 +36,33 @@
 	<iostream>
 	<string>
 
-1745306026 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.cpp
+1745378536 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.cpp
 	"Gerente.h"
 	"Empleado.h"
 	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
 	<cstdlib>
 
-1745304488 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.cpp
+1745306295 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.cpp
 	"Nodo.h"
 	<iostream>
 
 1745305058 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.cpp
 	"Hotdog.h"
+	"Nodo.h"
+
+1745378451 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1745377885 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.h
+	"Nodo.h"
+
+1745378424 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1745378442 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\pan.h
 	"Nodo.h"
 
