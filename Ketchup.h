@@ -1,9 +1,11 @@
 #ifndef KETCHUP_H
 #define KETCHUP_H
 
+#include "Pan.h"
+#include "Ketchup.h"
 #include "Nodo.h"
-
-class Ketchup
+// CAMBIAR A OTRO TIPO DE LISTA
+class Ketchup //pila doblemente ligada circular con encabezados
 {
     public:
         Ketchup();

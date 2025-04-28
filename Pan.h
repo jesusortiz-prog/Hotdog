@@ -2,8 +2,8 @@
 #define PAN_H
 
 #include "Nodo.h"
-
-class Pan //pila doblemente ligada circular con encabezados por pepe
+// HACERLO PILA SIMPLE LINEAL SIN ENCABEZADOS
+class Pan //pila doblemente ligada circular con encabezados
 {
     public:
         Pan();

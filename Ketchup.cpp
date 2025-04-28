@@ -15,7 +15,7 @@ Ketchup::~Ketchup()
         aux=inicio;
         inicio=inicio->sig;
         delete(aux);
-    }while (inicio!=NULL);
+    }while (inicio!=final);
 }
 
 bool Ketchup::vacia()
@@ -24,39 +24,48 @@ bool Ketchup::vacia()
 }
 void Ketchup::ingresarKetchupFinal()
 {
-    Nodo *nuevo=new Nodo();
-    if(vacia()==true)
+    int contador;
+    cout<<"Ingresa la cantidad de sobres de Ketchup que vas a agregar"<<endl;
+    cin>>contador;
+    cout<<"Se ingresaron "<<contador<<" sobres de Ketchup!!!"<<endl;
+    system("cls");
+    while(contador!=0)
     {
-        inicio=nuevo;
-        final=nuevo;
-        nuevo->sig=inicio;
-        nuevo->ant=inicio;
+        Nodo *nuevo=new Nodo();
+        if(vacia()==true)
+        {
+            inicio=nuevo;
+            final=nuevo;
+            nuevo->sig=inicio;
+            nuevo->ant=inicio;
+        }
+        else{
+            final->sig=nuevo;
+            nuevo->sig=inicio;
+            nuevo->ant=final;
+            inicio->ant=nuevo;
+            final=nuevo;
+        }
+        contador--;
     }
-    else{
-        final->sig=nuevo;
-        nuevo->sig=inicio;
-        nuevo->ant=final;
-        inicio->ant=nuevo;
-        final=nuevo;
-    }
+
 }
 
 void Ketchup::mostrarKetchup()
 {
-    Nodo *aux=inicio;
-    int contador=-1;
-    if(vacia()==true)
-    {
-        cout<<"No hay pan en el inventario."<<endl;
-        return;
-    }
-    cout<<"\n----------<\n";
-    do
-    {
+      Nodo *aux=inicio;
+    if(vacia()==true){
+        cout<<"No hay ketchup para mostrar\n";
+        cout<<"\n--------------\n";
+    }else{
+        int contador=0;
+        do{
         contador++;
         aux=aux->sig;
-    }while(aux!=inicio);
-    return;
+        }while(aux!=inicio);
+        cout<<"Total de ketchup en inventario: "<<contador<<endl;
+        cout<<"\n--------------\n";
+    }
 }
 
 void Ketchup::eliminarKetchupFinal()

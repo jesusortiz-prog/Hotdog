@@ -6,11 +6,11 @@
 #include <string>
 #include <iostream>
 
-#include <string> //segun eso se necesita para los nombres
+#include <string>
 
 using namespace std;
 
-Empleado::Empleado() //empleado es lista doble ligada circular- Sin encabezados COLA
+Empleado::Empleado() //cola doble ligada circular- Sin encabezados
 {
     inicio=nullptr;
 }
@@ -33,29 +33,56 @@ bool Empleado::vacia()
 {
     return(inicio==nullptr);
 }
+
+bool Empleado::id_unico(int id)
+{
+    Nodo *aux=inicio;
+    if(vacia())
+    {
+        return true;
+    }
+    else{
+        do{
+            if(aux->getId()==id)
+            {
+                return false;
+            }
+            aux=aux->sig;
+        }while(aux!=inicio);
+    }
+    return true;
+}
+
 void Empleado::ingresarEmpleadoFinal()
-{   string nombre;
+{
     int id;
-    cout<<"Ingrese el nombre: "<<endl;
-    cin>>nombre;
     cout<<"Ingresa la ID: "<<endl;
     cin>>id;
-
-    Nodo* nuevo=new Nodo(nombre,id);
-
-    if(inicio==nullptr)
+    if(!id_unico(id))
     {
-        inicio = nuevo;
-        nuevo->sig = nuevo;
-        nuevo->ant = nuevo;
-    }else{
-        nuevo->sig = inicio;
-        nuevo->ant = inicio->ant;  //esta logica la tenia mal antes hehe, se me hace chistoso que si me jala en el codigo que hicimos en la clase
+        cout<<"ID repetido, porfavor intenta otro"<<endl;
+    }
+    else
+    {
+        string nombre;
+        cout<<"Ingrese el nombre: "<<endl;
+        cin>>nombre;
+        Nodo* nuevo=new Nodo(nombre,id);
 
-        inicio->ant->sig = nuevo;
-        inicio->ant = nuevo;
-        }
-    cout<<"Empleado contratado correctamente, nombre: "<<nombre<<",Id: "<<id<<endl;
+        if(inicio==nullptr)
+        {
+            inicio = nuevo;
+            nuevo->sig = nuevo;
+            nuevo->ant = nuevo;
+        }else{
+            nuevo->sig = inicio;
+            nuevo->ant = inicio->ant;  //esta logica la tenia mal antes hehe, se me hace chistoso que si me jala en el codigo que hicimos en la clase
+
+            inicio->ant->sig = nuevo;
+            inicio->ant = nuevo;
+            }
+        cout<<"Empleado contratado correctamente, nombre: "<<nombre<<",Id: "<<id<<endl;
+    }
 }
 void Empleado::eliminarEmpleadoInicio()//eliminarInicio
 {
@@ -97,7 +124,6 @@ void Empleado::mostrarEmpleado()
 
 void Empleado::menuEmpleado()
 {
-    Hotdog instancia;
     int opc;
     do{/*
         aqui mejor vender "Hotdog"
@@ -108,15 +134,15 @@ void Empleado::menuEmpleado()
         switch(opc){
             case 1:{
                 cout<<"Ingresando una salchicha..."<<endl;
-                instancia.ingresarSalchicas();
+                //instancia.ingresarSalchicas();
                 break;
             }
             case 2:{
-                instancia.mostrarSalchicas();
+                //instancia.mostrarSalchicas();
                 break;
             }
             case 3:{
-                instancia.eliminarSalchicas();
+                //instancia.eliminarSalchicas();
                 break;
             }
             case 4:{
@@ -131,3 +157,7 @@ void Empleado::menuEmpleado()
     }while(opc!=4);
 }
 
+void Empleado::quicksort()
+{
+    //pendiente para hacerlo con texto chuy
+}

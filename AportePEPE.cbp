@@ -46,6 +46,8 @@
 		<Unit filename="Nodo.h" />
 		<Unit filename="Pan.cpp" />
 		<Unit filename="Pan.h" />
+		<Unit filename="Salchicha.cpp" />
+		<Unit filename="Salchicha.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

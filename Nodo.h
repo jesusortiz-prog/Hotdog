@@ -26,6 +26,7 @@ class Nodo
         string nombre;
         int id;
         int elemento;
+        string tipo;
 };
 
 #endif // NODO_H

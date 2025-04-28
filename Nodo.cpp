@@ -27,6 +27,3 @@ string Nodo::getNombre(){
 int Nodo::getId(){
     return(id);
 }
-
-
-

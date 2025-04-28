@@ -2,11 +2,11 @@
 #define EMPLEADO_H
 
 #include "Nodo.h"
+#include "Hotdog.h"
 
 #include <string>
 #include <iostream>
 
-#include "Nodo.h"
 using namespace std;
 
 class Empleado
@@ -14,7 +14,12 @@ class Empleado
     public:
         Empleado();
         ~Empleado();
+
+        Hotdog instancia;
+
         bool vacia();
+
+        bool id_unico(int id);
 
         void ingresarEmpleadoFinal();
 
@@ -24,12 +29,8 @@ class Empleado
 
         void menuEmpleado();
 
-/*
-        int fechaIngreso;
-        float nomina;
-        int idEmpleado;
-        string nombre;
-*/
+        void quicksort();
+
         Nodo *inicio;
 };
 

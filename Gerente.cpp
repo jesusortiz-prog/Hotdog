@@ -56,13 +56,13 @@ void Gerente::subInventario(){
             hotdog.mostrarInventario();
             break;
         case 2:
-            hotdog.ingresarSalchicas();
+            hotdog.salchicha.ingresarSalchicha();
             break;
         case 3:
-            Pan().ingresarPanFinal();
+            hotdog.pan.ingresarPanFinal();
             break;
         case 4:
-            Ketchup().ingresarKetchupFinal();
+            hotdog.ketchup.ingresarKetchupFinal();
             break;
         case 5:
             cout<<"volviendo...\n";
