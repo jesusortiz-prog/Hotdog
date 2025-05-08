@@ -19,7 +19,6 @@ class Pan //pila doblemente ligada circular con encabezados
 
     private:
         Nodo *inicio;
-        Nodo *final;
 };
 
 #endif // PAN_H

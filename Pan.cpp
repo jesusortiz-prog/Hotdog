@@ -4,18 +4,17 @@
 Pan::Pan()
 {
     inicio=nullptr;
-    final=nullptr;
 }
 
 Pan::~Pan()
 {
     Nodo *aux=inicio;
-    do
+    while (inicio!=nullptr)
     {
         aux=inicio;
         inicio=inicio->sig;
         delete(aux);
-    }while (inicio!=final);
+    }
 }
 
 bool Pan::vacia()
@@ -35,16 +34,14 @@ void Pan::ingresarPanFinal()
         if(vacia()==true)
         {
             inicio=nuevo;
-            final=nuevo;
-            nuevo->sig=inicio;
-            nuevo->ant=inicio;
         }
         else{
-            final->sig=nuevo;
-            nuevo->sig=inicio;
-            nuevo->ant=final;
-            inicio->ant=nuevo;
-            final=nuevo;
+            Nodo *aux=inicio;
+            while(aux->sig!=NULL)
+            {
+                aux=aux->sig;
+            }
+            aux->sig=nuevo;
         }
         contador--;
     }
@@ -58,10 +55,11 @@ void Pan::mostrarPan()
         cout<<"\n--------------\n";
     }else{
         int contador=0;
-        do{
-        contador++;
-        aux=aux->sig;
-        }while(aux!=inicio);
+        while (aux!=nullptr)
+        {
+            contador++;
+            aux=aux->sig;
+        }
         cout<<"Total de panes en inventario: "<<contador<<endl;
         cout<<"\n--------------\n";
     }
@@ -74,16 +72,19 @@ void Pan::eliminarPanFinal()
         cout<<"No hay pan que eliminar"<<endl;
     }
     else{
-        Nodo *aux=final;
-        if(inicio->sig==inicio)
+        Nodo *aux=inicio;
+        if(inicio->sig==nullptr)
         {
             inicio=nullptr;
-            final=nullptr;
         }
         else{
-            final=final->ant;
-            final->sig=inicio;
-            inicio->ant=final;
+            Nodo *aux2;
+            while(aux->sig!=NULL)
+            {
+                aux2=aux;
+                aux=aux->sig;
+            }
+            aux2->sig=NULL;
         }
         delete(aux);
     }
