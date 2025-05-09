@@ -36,7 +36,19 @@ void Salchicha::ingresarSalchicha()
         }
         contador--;
     }
-
+}
+void Salchicha::cargarSalchicha()
+{
+    Nodo *temporal=new Nodo();
+    if(vacia()){
+        inicio=temporal;
+    }else{
+        Nodo *aux=inicio;
+        while(aux->sig!=NULL){
+            aux=aux->sig;
+            }
+            aux->sig=temporal;
+        }
 }
 void Salchicha::mostrarSalchicha()
 {
@@ -79,4 +91,9 @@ void Salchicha::eliminarSalchicha()
             delete(aux);
         }
     }
+}
+
+Nodo* Salchicha::getInicio()
+{
+    return inicio;
 }

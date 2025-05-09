@@ -25,6 +25,9 @@ class Gerente
         void subEmpleados();   //submenus agregados por chuy
         void subInventario();
 
+        void guardarInventario();
+        void cargarInventario();
+
     protected:
 
     private:

@@ -128,21 +128,22 @@ void Empleado::menuEmpleado()
     do{/*
         aqui mejor vender "Hotdog"
             */
-        cout<<"Menu de carrito de perritos calientes\n1)Insertar\n2)Mostrar\n3)Eliminar\n4)salir."<<endl;
+        cout<<"Menu de carrito de perritos calientes\n1)Preparar HotDog (insertar)\n2)Mostrar inventario y HotDogs preparados\n3)Vender HotDog (eliminar)\n4)Salir."<<endl;
         cin>>opc;
         system("cls");
         switch(opc){
             case 1:{
                 cout<<"Ingresando una salchicha..."<<endl;
-                //instancia.ingresarSalchicas();
+                instancia->insertarHotdogFinal();
                 break;
             }
             case 2:{
-                //instancia.mostrarSalchicas();
+                instancia->mostrarInventario();
+                instancia->mostrarHotdogs();
                 break;
             }
             case 3:{
-                //instancia.eliminarSalchicas();
+                instancia->eliminarHotdogInicio();
                 break;
             }
             case 4:{
@@ -155,6 +156,11 @@ void Empleado::menuEmpleado()
             }
         }
     }while(opc!=4);
+}
+
+void Empleado::setInventario(Hotdog *inventarioCompartido)
+{
+    instancia = inventarioCompartido;
 }
 
 void Empleado::quicksort()

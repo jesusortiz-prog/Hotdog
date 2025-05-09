@@ -11,8 +11,11 @@ class Salchicha //cola simplemente ligada lineal sin encabezados
        bool vacia();
 
        void ingresarSalchicha();
+       void cargarSalchicha(); //para cuando se carga el archivo
        void mostrarSalchicha();
        void eliminarSalchicha();
+
+       Nodo* getInicio();
 
     protected:
 

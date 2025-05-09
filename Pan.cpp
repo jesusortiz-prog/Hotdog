@@ -46,6 +46,22 @@ void Pan::ingresarPanFinal()
         contador--;
     }
 }
+void Pan::cargarPan()
+{
+        Nodo *nuevo=new Nodo();
+        if(vacia()==true)
+        {
+            inicio=nuevo;
+        }
+        else{
+            Nodo *aux=inicio;
+            while(aux->sig!=NULL)
+            {
+                aux=aux->sig;
+            }
+            aux->sig=nuevo;
+        }
+}
 
 void Pan::mostrarPan()
 {
@@ -88,4 +104,9 @@ void Pan::eliminarPanFinal()
         }
         delete(aux);
     }
+}
+
+Nodo* Pan::getInicio()
+{
+    return inicio;
 }

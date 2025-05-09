@@ -25,6 +25,7 @@ int main() //menu del gerente
             break;
         case 2:
             inst.empleado.menuEmpleado();
+            inst.guardarInventario();
             break;
         case 3:
             cout<<"Saliendo...\n";

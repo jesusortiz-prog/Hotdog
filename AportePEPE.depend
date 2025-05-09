@@ -152,3 +152,86 @@
 	"Salchicha.h"
 	"Nodo.h"
 
+1746748105 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+
+1746746642 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	<string>
+	<iostream>
+
+1746746048 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1746751263 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1746750680 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1746750783 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+	"Nodo.h"
+
+1746750671 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1746750377 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1746751272 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+
+1746751249 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1746750750 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1746750885 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1746746048 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1746750707 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1746750638 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+

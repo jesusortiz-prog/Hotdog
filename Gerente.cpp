@@ -5,9 +5,12 @@
 #include "Pan.h"
 #include "Ketchup.h"
 #include <cstdlib>
+#include <fstream>
+#include <sstream>
 Gerente::Gerente()
 {
-    //ctor
+    empleado.setInventario(&hotdog);
+    cargarInventario();
 }
 
 Gerente::~Gerente()
@@ -66,6 +69,7 @@ void Gerente::subInventario(){
             break;
         case 5:
             cout<<"volviendo...\n";
+            guardarInventario();
             break;
         default:
             cout<<"Opcion no valida...\n";
@@ -99,4 +103,93 @@ void Gerente::menuGerente() //agregrar do while a cada case
         }
     }while(opc!=3);
 
+}
+
+
+void Gerente::guardarInventario(){
+    ofstream archivo("inventario.txt");
+
+    if (!archivo.is_open()){
+        cout<<"Error"<<endl;
+        return;
+    }
+    // Guardar salchichas
+    Nodo* aux=hotdog.salchicha.getInicio();
+    int contador=0;
+    while (aux!=nullptr){
+        contador++;
+        aux=aux->sig;
+    }
+    archivo<<"Salchichas: "<<contador<<endl;
+
+    // Guardar panes
+    aux = hotdog.pan.getInicio();
+    contador=0;
+    while (aux!=nullptr){
+        contador++;
+        aux=aux->sig;
+    }
+    archivo<<"Panes: "<<contador<<endl;
+    // Guardar ketchup
+    aux = hotdog.ketchup.getInicio();
+    contador = 0;
+    if(!hotdog.ketchup.vacia()){
+        do{
+            contador++;
+            aux=aux->sig;
+        }while(aux!=hotdog.ketchup.getInicio());
+    }
+    archivo<<"Ketchup: "<<contador<<endl;
+    // Guardar hotdog
+    aux = hotdog.getInicio();
+    contador=0;
+    if(!hotdog.vacia()){
+        do{
+            contador++;
+            aux=aux->sig;
+        }while(aux!=hotdog.getInicio());
+    }
+    archivo<<"Hotdog: "<<contador<<endl;
+
+    archivo.close();
+    cout<<"Inventario guardado."<<endl;
+}
+
+void Gerente::cargarInventario() {
+    ifstream archivo("inventario.txt");
+    if(!archivo.is_open()) {
+        cout<<"Error al abrir."<<endl;
+        return;
+    }
+
+    string linea;
+    int cantidad;
+
+    //leer salchichas
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":") + 1))>>cantidad;
+    for(int i=0;i<cantidad;i++){
+        hotdog.salchicha.cargarSalchicha();
+    }
+    //leer panes
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":")+1))>>cantidad;
+    for(int i=0;i<cantidad;i++) {
+        hotdog.pan.cargarPan();
+    }
+    //leer ketchup
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":")+1))>>cantidad;
+    for (int i=0;i<cantidad;i++){
+        hotdog.ketchup.cargarKetchup();
+    }
+    //leer hotdog
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":")+1))>>cantidad;
+    for (int i=0;i<cantidad;i++){
+        hotdog.cargarHotdog();
+    }
+
+    archivo.close();
+    cout << "Inventario cargado correctamente desde archivo." << endl;
 }

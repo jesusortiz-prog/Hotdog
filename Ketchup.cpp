@@ -51,6 +51,25 @@ void Ketchup::ingresarKetchupFinal()
 
 }
 
+void Ketchup::cargarKetchup()
+{
+ Nodo *nuevo=new Nodo();
+        if(vacia()==true)
+        {
+            inicio=nuevo;
+            final=nuevo;
+            nuevo->sig=inicio;
+            nuevo->ant=inicio;
+        }
+        else{
+            final->sig=nuevo;
+            nuevo->sig=inicio;
+            nuevo->ant=final;
+            inicio->ant=nuevo;
+            final=nuevo;
+        }
+}
+
 void Ketchup::mostrarKetchup()
 {
       Nodo *aux=inicio;
@@ -88,4 +107,9 @@ void Ketchup::eliminarKetchupFinal()
         }
         delete(aux);
     }
+}
+
+Nodo* Ketchup::getInicio()
+{
+    return inicio;
 }

@@ -15,7 +15,7 @@ class Empleado
         Empleado();
         ~Empleado();
 
-        Hotdog instancia;
+        Hotdog *instancia;
 
         bool vacia();
 
@@ -28,6 +28,8 @@ class Empleado
         void eliminarEmpleadoInicio();
 
         void menuEmpleado();
+
+        void setInventario(Hotdog*);
 
         void quicksort();
 

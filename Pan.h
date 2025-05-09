@@ -2,18 +2,19 @@
 #define PAN_H
 
 #include "Nodo.h"
-// HACERLO PILA SIMPLE LINEAL SIN ENCABEZADOS
-class Pan //pila doblemente ligada circular con encabezados
-{
+// PILA SIMPLE LINEAL SIN ENCABEZADOS
+class Pan{
     public:
         Pan();
         ~Pan();
         bool vacia();
         void ingresarPanFinal();
-
+        void cargarPan();
         void mostrarPan();
 
         void eliminarPanFinal();
+
+        Nodo* getInicio();
 
     protected:
 

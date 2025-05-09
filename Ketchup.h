@@ -12,10 +12,12 @@ class Ketchup //pila doblemente ligada circular con encabezados
         ~Ketchup();
         bool vacia();
         void ingresarKetchupFinal();
-
+        void cargarKetchup();
         void mostrarKetchup();
 
         void eliminarKetchupFinal();
+
+        Nodo* getInicio();
 
     protected:
 
