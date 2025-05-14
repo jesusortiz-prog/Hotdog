@@ -1,0 +1,4 @@
+Salchichas: 3
+Panes: 4
+Ketchup: 7
+Hotdog: 0
