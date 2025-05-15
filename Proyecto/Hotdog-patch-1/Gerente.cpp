@@ -7,11 +7,25 @@
 #include <cstdlib>
 #include <fstream>
 #include <sstream>
+
+#include <iomanip> // Necesario para setw() (el alineador)
+
+const int Gerente::NUM_CIUDADES = 4;
+
 Gerente::Gerente()
 {
     empleado.setInventario(&hotdog);
     cargarInventario();
     empleado.cargarEmpleados();
+
+    //inicializar grafo
+
+    ciudades[0] = "GDL";
+    ciudades[1] = "Zapopan";
+    ciudades[2] = "Tlajoyork";
+    ciudades[3] = "Tetlan";
+
+    inicializarGrafo();
 }
 
 Gerente::~Gerente()
@@ -88,7 +102,7 @@ void Gerente::menuGerente() //agregrar do while a cada case
 {
     int opc;
     do{
-        cout<<"Menu gerente\n1)Administrar empleados\n2)Administrar inventario\n3)Volver"<<endl;
+        cout<<"Menu gerente\n1)Administrar empleados\n2)Administrar inventario\n3)Mostrar rutas de ciudades\n4)Volver"<<endl;
         cin>>opc;
         system("cls");
 
@@ -100,13 +114,17 @@ void Gerente::menuGerente() //agregrar do while a cada case
             subInventario();
             break;
         case 3:
+            mostrarRutas();
+            break;
+        case 4:
             cout<<"...\n";
             break;
+
         default:
             cout<<"Opcion no valida"<<endl;
             break;
         }
-    }while(opc!=3);
+    }while(opc!=4);
 
 }
 
@@ -197,4 +215,55 @@ void Gerente::cargarInventario() {
 
     archivo.close();
     cout << "Inventario cargado correctamente desde archivo." << endl;
+}
+
+
+//grafo
+void Gerente::inicializarGrafo() {
+    // llena la matriz con ceros
+    for (int i = 0; i < NUM_CIUDADES; i++) {
+        for (int j = 0; j < NUM_CIUDADES; j++) {
+            grafo[i][j] = 0;
+        }
+    }
+
+    grafo[0][1] = grafo[1][0] = 10; // GDL - Zapopan
+    grafo[0][2] = grafo[2][0] = 20; // GDL - Tlajoyork
+    grafo[0][3] = grafo[3][0] = 8;  // GDL - Tetlan
+    grafo[1][2] = grafo[2][1] = 18; // Zapopan - Tlajoyork
+    grafo[1][3] = grafo[3][1] = 12; // Zapopan - Tetlan
+    grafo[2][3] = grafo[3][2] = 15; // Tlajoyork - Tetlan
+    /*
+    ciudades[0] = "GDL";
+    ciudades[1] = "Zapopan";
+    ciudades[2] = "Tlajoyork";
+    ciudades[3] = "Tetlan";
+    */
+}
+
+int Gerente::obtenerIndiceCiudad(string& nombre) {
+    for (int i = 0; i < NUM_CIUDADES; ++i) {
+        if (ciudades[i] == nombre) return i;
+    }
+    return -1;
+}
+
+void Gerente::mostrarRutas() {
+    cout << "\nDistancias entre ciudades (km):\n"<<endl;
+
+    cout << setw(12) << " "; //hace que se alinee mejor
+    for (int i = 0; i < NUM_CIUDADES; i++) {
+        cout << setw(12) << ciudades[i];
+    }
+    cout << "\n";
+    cout<<"\t----|---------------|---------|---------|-------------|"<<endl;
+
+    for (int i = 0; i < NUM_CIUDADES; i++) {
+        cout << setw(12) << ciudades[i]<<"|";
+        for (int j = 0; j < NUM_CIUDADES; j++) {
+            cout << setw(8) << grafo[i][j]<<"Km";
+        }
+        cout << "\n";
+        cout<<"\t----|---------------|---------|---------|-------------|"<<endl;
+    }
 }

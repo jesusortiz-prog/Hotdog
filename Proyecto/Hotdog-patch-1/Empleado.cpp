@@ -13,6 +13,9 @@ using namespace std;
 Empleado::Empleado() //cola doble ligada circular- Sin encabezados
 {
     inicio=nullptr;
+
+
+
 }
 
 Empleado::~Empleado() /////////////////chuy le agrego el destructor
@@ -334,3 +337,6 @@ void Empleado::busquedaBinaria(){
     }
     cout<<"Numero no encontrado, busque por otro\n";
 }
+
+
+

@@ -235,7 +235,7 @@
 	"Salchicha.h"
 	"Nodo.h"
 
-1747198943 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.cpp
+1747274106 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.cpp
 	"Empleado.h"
 	"Hotdog.h"
 	"Gerente.h"
@@ -245,7 +245,7 @@
 	<string>
 	<fstream>
 
-1747198431 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.h
+1747274106 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.h
 	"Nodo.h"
 	"Hotdog.h"
 	<string>
@@ -271,14 +271,14 @@
 1746820375 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\salchicha.h
 	"Nodo.h"
 
-1747191222 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.h
+1747275942 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.h
 	"Hotdog.h"
 	"Nodo.h"
 	"Empleado.h"
 	<string>
 	<iostream>
 
-1747199082 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.cpp
+1747275819 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.cpp
 	"Gerente.h"
 	"Empleado.h"
 	"Hotdog.h"
@@ -287,6 +287,7 @@
 	<cstdlib>
 	<fstream>
 	<sstream>
+	<iomanip>
 
 1747189279 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\hotdog.cpp
 	"Hotdog.h"
