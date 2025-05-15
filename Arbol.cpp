@@ -3,9 +3,10 @@
 
 using namespace std;
 
-NodoArbol::NodoArbol(float hora)
+NodoArbol::NodoArbol(float hora,int id)
 {
     this->hora=hora;
+    this->id=id;
     izquierdo=nullptr;
     derecho=nullptr;
 }
@@ -19,29 +20,34 @@ Arbol::Arbol() {
     raiz=nullptr;
 }
 
-NodoArbol* Arbol::insertar(NodoArbol* nodo, float hora) {
+NodoArbol* Arbol::insertar(NodoArbol* nodo, float hora,int id)
+{
     if(nodo==nullptr)
     {
-        return new NodoArbol(hora);
+        return new NodoArbol(hora,id);
     }
 
     if(hora<nodo->hora)
     {
-        nodo->izquierdo=insertar(nodo->izquierdo,hora);
+        nodo->izquierdo=insertar(nodo->izquierdo,hora,id);
     }else if(hora>nodo->hora){
-        nodo->derecho=insertar(nodo->derecho,hora);
+        nodo->derecho=insertar(nodo->derecho,hora,id);
     }
     return nodo;
 }
 
-void Arbol::insertar(float hora) {
-    raiz=insertar(raiz,hora);
+void Arbol::insertar(float hora,int id)
+{
+    raiz=insertar(raiz,hora,id);
 }
 
-void Arbol::recorridoInOrder(NodoArbol* nodo) {
-    if (nodo!=nullptr) {
+void Arbol::recorridoInOrder(NodoArbol* nodo)
+{
+    if(nodo!=nullptr)
+    {
         recorridoInOrder(nodo->izquierdo);
-        cout <<"Hora de entrada: "<<nodo->hora<<endl;
+        cout<<"Hora de entrada: "<<nodo->hora<<endl;
+        cout<<"Id del empleado: "<<nodo->id<<endl;
         recorridoInOrder(nodo->derecho);
     }
 }
@@ -53,5 +59,26 @@ void Arbol::recorridoInOrder() {
     }
     else{
         recorridoInOrder(raiz);
+    }
+}
+void Arbol::imprimirArbol(NodoArbol* nodo,int espacio,int incremento)
+{
+    if(raiz==nullptr)
+    {
+        cout<<"Árbol vacío"<<endl;
+    }else{
+        if(nodo==nullptr)
+            return;
+        //incrementa el espacio entre niveles
+        espacio += incremento;
+        //subárbol derecho
+        imprimirArbol(nodo->derecho,espacio,incremento);
+        //imprimir el nodo actual
+        cout<<endl;
+        for(int i=incremento;i<espacio;i++)
+            cout<<" ";
+        cout<<nodo->hora<<" (ID: "<<nodo->id<<")"<<endl;
+        //subárbol izquierdo
+        imprimirArbol(nodo->izquierdo,espacio,incremento);
     }
 }

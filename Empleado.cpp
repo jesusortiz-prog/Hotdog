@@ -132,10 +132,8 @@ void Empleado::mostrarEmpleado()
 void Empleado::menuEmpleado()
 {
     int opc;
-    do{/*
-        aqui mejor vender "Hotdog"
-            */
-        cout<<"Menu de carrito de perritos calientes\n1)Preparar HotDog (insertar)\n2)Mostrar inventario y HotDogs preparados\n3)Vender HotDog (eliminar)\n4)Check-in\n5)Salir."<<endl;
+    do{
+        cout<<"Menu de carrito de perritos calientes\n1)Preparar HotDog (insertar)\n2)Mostrar inventario y HotDogs preparados\n3)Vender HotDog (eliminar)\n4)Ingresar hora de entrada\n5)Mostrar arbol\n6)Salir."<<endl;
         cin>>opc;
         system("cls");
         switch(opc){
@@ -153,14 +151,29 @@ void Empleado::menuEmpleado()
                 instancia->eliminarHotdogInicio();
                 break;
             }
-            case 4:
+            case 4:{
                 float hora;
+                int id;
                 cout<<"Ingrese la hora de entrada: "<<endl;
                 cin>>hora;
-                arbol->insertar(hora);
-                arbol->recorridoInOrder();
+                cout<<"Ingrese id del empleado: "<<endl;
+                cin>>id;
+                if(!id_unico(id))
+                {
+                    arbol->insertar(hora,id);
+                    arbol->recorridoInOrder();
+                }
+                else
+                {
+                    cout<<"Id no encontrado en el sistema"<<endl;
+                }
+
                 break;
-            case 5:{
+            }
+            case 5:
+                arbol->imprimirArbol(arbol->raiz,0,5);
+                break;
+            case 6:{
                 cout<<"Saliendo...\n";
                 break;
             }
@@ -169,7 +182,7 @@ void Empleado::menuEmpleado()
                 break;
             }
         }
-    }while(opc!=5);
+    }while(opc!=4);
 }
 
 void Empleado::setInventario(Hotdog *inventarioCompartido)
@@ -224,106 +237,112 @@ void Empleado::cargarEmpleados() {
 }
 
 
-void Empleado::shellsort() {
-
-    if (inicio == nullptr) {
-        cout << "Lista vacía.\n";
+void Empleado::shellsort()
+{
+    if(inicio==nullptr)
+    {
+        cout<<"Lista vacía."<<endl;
         return;
     }
 
-    // Paso 1: Contar los nodos
-    int contador = 1;
-    Nodo* aux = inicio->sig;
-    while (aux != inicio) {
+    // contar nodos
+    int contador=1;
+    Nodo* aux=inicio->sig;
+    while(aux!=inicio)
+    {
         contador++;
-        aux = aux->sig;
+        aux=aux->sig;
     }
-
-    // Paso 2: Crear arreglo de punteros a Nodo
-    Nodo** nodos = new Nodo*[contador];
-    aux = inicio;
-    for (int i = 0; i < contador; i++) {
-        nodos[i] = aux;
-        aux = aux->sig;
+    //crear arreglo de punteros a Nodo
+    Nodo** nodos=new Nodo*[contador];
+    aux=inicio;
+    for(int i=0;i<contador;i++)
+    {
+        nodos[i]=aux;
+        aux=aux->sig;
     }
-
-    // Paso 3: Shell Sort por ID
-    for (int gap = contador / 2; gap > 0; gap /= 2) {
-        for (int i = gap; i < contador; i++) {
-            Nodo* temp = nodos[i];
+    //shell Sort por id
+    for(int gap=contador/2;gap>0;gap/= 2)
+    {
+        for(int i=gap;i<contador;i++)
+        {
+            Nodo* temp=nodos[i];
             int j;
-            for (j = i; j >= gap && nodos[j - gap]->getId() > temp->getId(); j -= gap) {
-                nodos[j] = nodos[j - gap];
+            for(j=i;j>=gap&&nodos[j-gap]->getId()>temp->getId();j-=gap)
+            {
+                nodos[j]=nodos[j-gap];
             }
-            nodos[j] = temp;
+            nodos[j]=temp;
         }
     }
-
-    // Paso 4: Reconstruir los enlaces (sig y ant)
-    for (int i = 0; i < contador; i++) {
-        nodos[i]->sig = nodos[(i + 1) % contador];
-        nodos[i]->ant = nodos[(i - 1 + contador) % contador];
+    //reconstruir sig y ant
+    for(int i=0;i<contador;i++)
+    {
+        nodos[i]->sig=nodos[(i+1)%contador];
+        nodos[i]->ant=nodos[(i-1+contador)%contador];
     }
-
-    // Paso 5: Actualizar inicio
-    inicio = nodos[0];
-
-    // Paso 6: Liberar memoria del arreglo (no los nodos)
+    //actualizar inicio
+    inicio=nodos[0];
+    //liberar memoria del arreglo
     delete[] nodos;
-
-    cout << "Lista ordenada exitosamente por ID (Shell Sort).\n";
-     Nodo* temp = inicio;
-    do {
-        cout << "ID: " << temp->getId() << ", Nombre: " << temp->getNombre() << endl;
-        temp = temp->sig;
-    } while (temp != inicio);
+    cout<<"Lista ordenada exitosamente por ID (Shell Sort)"<<endl;
+     Nodo* temp=inicio;
+    do{
+        cout<<"ID: "<<temp->getId()<<", Nombre: "<<temp->getNombre()<<endl;
+        temp=temp->sig;
+    }while(temp!=inicio);
 
 }
 
-void Empleado::busquedaBinaria(){
-
-    if (inicio == nullptr) {
-        cout << "Lista vacia.\n";
+void Empleado::busquedaBinaria()
+{
+    if(inicio==nullptr)
+    {
+        cout<<"Lista vacia"<<endl;
         return;
     }
-
-    // Paso 1: Contar los nodos
+    //contar los nodos
     int contador = 1;
-    Nodo* aux = inicio->sig;
-    while (aux != inicio) {
+    Nodo* aux=inicio->sig;
+    while(aux!=inicio)
+    {
         contador++;
-        aux = aux->sig;
+        aux=aux->sig;
     }
 
-    // Paso 2: Crear arreglo de punteros a Nodo
-    Nodo** nodos = new Nodo*[contador];
-    aux = inicio;
-    for (int i = 0; i < contador; i++) {
-        nodos[i] = aux;
-        aux = aux->sig;
+    //crear arreglo de punteros
+    Nodo** nodos=new Nodo*[contador];
+    aux=inicio;
+    for(int i=0;i<contador;i++)
+    {
+        nodos[i]=aux;
+        aux=aux->sig;
     }
 
-    // Paso 3: Shell Sort por ID
-    for (int gap = contador / 2; gap > 0; gap /= 2) {
-        for (int i = gap; i < contador; i++) {
-            Nodo* temp = nodos[i];
+    // shell Sort
+    for(int gap=contador/2;gap>0;gap/= 2)
+    {
+        for(int i=gap;i<contador;i++)
+        {
+            Nodo* temp=nodos[i];
             int j;
-            for (j = i; j >= gap && nodos[j - gap]->getId() > temp->getId(); j -= gap) {
-                nodos[j] = nodos[j - gap];
+            for(j=i;j>=gap&&nodos[j-gap]->getId()>temp->getId();j-=gap)
+            {
+                nodos[j]=nodos[j-gap];
             }
-            nodos[j] = temp;
+            nodos[j]=temp;
         }
     }
 
-    // Paso 4: Reconstruir los enlaces (sig y ant)
-    for (int i = 0; i < contador; i++) {
-        nodos[i]->sig = nodos[(i + 1) % contador];
-        nodos[i]->ant = nodos[(i - 1 + contador) % contador];
+    //reconstruir los enlaces
+    for(int i=0;i<contador;i++)
+    {
+        nodos[i]->sig=nodos[(i+1)%contador];
+        nodos[i]->ant=nodos[(i-1+contador)%contador];
     }
 
-    // Paso 5: Actualizar inicio
-    inicio = nodos[0];
-
+    //actualizar inicio
+    inicio=nodos[0];
     int numeroBuscado=0;
     cout<<"Ingrese el ID a buscar: ";
     cin>>numeroBuscado;
@@ -341,5 +360,5 @@ void Empleado::busquedaBinaria(){
             i=medio+1;
         }
     }
-    cout<<"Numero no encontrado, busque por otro\n";
+    cout<<"Numero no encontrado, busque por otro"<<endl;
 }

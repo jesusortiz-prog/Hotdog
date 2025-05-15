@@ -30,6 +30,15 @@ class Gerente
 
         void quicksort();
 
+        //cosas para grafo=
+        static const int NUM_CIUDADES;  //no dejo =4 aqui que porque no tengo una version reciente del c++ haha
+        string ciudades[4];         // Usamos valor fijo directamente aqui
+        int grafo[4][4];                 // Tambien aqui
+        void inicializarGrafo();
+        void mostrarRutas();
+        int obtenerIndiceCiudad(string& nombre);
+
+
     private:
         string nombre;
 };
