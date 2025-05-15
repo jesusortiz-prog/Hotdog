@@ -3,7 +3,7 @@
 
 #include "Nodo.h"
 #include "Hotdog.h"
-
+#include "Arbol.h"
 #include <string>
 #include <iostream>
 
@@ -16,22 +16,26 @@ class Empleado
         ~Empleado();
 
         Hotdog *instancia;
+        Arbol *arbol;
 
         bool vacia();
 
         bool id_unico(int id);
 
         void ingresarEmpleadoFinal();
-
         void mostrarEmpleado();
-
         void eliminarEmpleadoInicio();
 
         void menuEmpleado();
 
         void setInventario(Hotdog*);
 
-        void quicksort();
+        void guardarEmpleadosArchivo();
+        void cargarEmpleados();
+
+        void shellsort();
+        void busquedaBinaria();
+
 
         Nodo *inicio;
 };

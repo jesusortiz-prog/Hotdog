@@ -16,6 +16,9 @@ class Nodo
         int getElemento();
         string getNombre();
         int getId();
+        void setId(int id);
+        void setNombre(string nombre);
+
         //Empleado *getEmpleado();
 
         //string getNombre(); //no jalo

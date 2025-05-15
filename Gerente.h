@@ -28,7 +28,7 @@ class Gerente
         void guardarInventario();
         void cargarInventario();
 
-    protected:
+        void quicksort();
 
     private:
         string nombre;

@@ -113,3 +113,5 @@ Nodo* Ketchup::getInicio()
 {
     return inicio;
 }
+
+

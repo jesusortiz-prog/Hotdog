@@ -27,3 +27,11 @@ string Nodo::getNombre(){
 int Nodo::getId(){
     return(id);
 }
+
+void Nodo::setId(int id){
+    this->id=id;
+
+}
+void Nodo::setNombre(string nombre){
+    this->nombre=nombre;
+}

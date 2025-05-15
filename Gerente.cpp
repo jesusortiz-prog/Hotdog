@@ -11,6 +11,7 @@ Gerente::Gerente()
 {
     empleado.setInventario(&hotdog);
     cargarInventario();
+    empleado.cargarEmpleados();
 }
 
 Gerente::~Gerente()
@@ -21,7 +22,7 @@ Gerente::~Gerente()
 void Gerente::subEmpleados(){
     int opcEmp;
     do{
-        cout<<"1)Ingresar empleado\n2)Despedir empleado con mas antiguedad\n3)Mostrar\n4)Volver"<<endl;
+        cout<<"1)Ingresar empleado\n2)Despedir empleado con mas antiguedad\n3)Mostrar\n4)Buscar empleado por ID\n5)Volver"<<endl;
         cin>>opcEmp;
         system("cls");
         switch(opcEmp){
@@ -35,17 +36,21 @@ void Gerente::subEmpleados(){
             break;
         case 3:
             empleado.mostrarEmpleado();
-            //mostrar el total de empleados
+            empleado.guardarEmpleadosArchivo();
             break;
         case 4:
+            empleado.busquedaBinaria();
+            break;
+        case 5:
             cout<<"Saliendo...\n";
+            empleado.cargarEmpleados();
             break;
         default:
             cout<<"Opcion no valida"<<endl;
             break;
         }
 
-    }while(opcEmp!=4);
+    }while(opcEmp!=5);
 }
 
 void Gerente::subInventario(){

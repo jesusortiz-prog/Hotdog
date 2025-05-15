@@ -1,18 +1,19 @@
 #include "Empleado.h"
 #include "Hotdog.h"
 #include "Gerente.h"
-
+#include "Arbol.h"
 #include <cstdlib>
 #include <string>
 #include <iostream>
 
 #include <string>
+#include <fstream>
 
 using namespace std;
-
 Empleado::Empleado() //cola doble ligada circular- Sin encabezados
 {
     inicio=nullptr;
+    arbol = new Arbol;
 }
 
 Empleado::~Empleado() /////////////////chuy le agrego el destructor
@@ -28,6 +29,7 @@ Empleado::~Empleado() /////////////////chuy le agrego el destructor
     } while (aux != inicio);
 
     inicio = nullptr;
+    delete arbol;
 }
 bool Empleado::vacia()
 {
@@ -82,7 +84,10 @@ void Empleado::ingresarEmpleadoFinal()
             inicio->ant = nuevo;
             }
         cout<<"Empleado contratado correctamente, nombre: "<<nombre<<",Id: "<<id<<endl;
+
     }
+
+
 }
 void Empleado::eliminarEmpleadoInicio()//eliminarInicio
 {
@@ -110,8 +115,8 @@ void Empleado::mostrarEmpleado()
     if(vacia()==true)
     {
         cout<<"No hay empleados para mostrar"<<endl;
-    }
-    else{
+    }else{
+        cout<<"Lista no ordenada: "<<endl;
         Nodo *aux=inicio;
         do{
             cout<<"Nombre del empleado: "<<aux->getNombre()<<endl;
@@ -120,6 +125,8 @@ void Empleado::mostrarEmpleado()
             aux=aux->sig;
         }while(aux!=inicio);
     }
+    cout<<"Lista ordenada: "<<endl;
+    shellsort();
 }
 
 void Empleado::menuEmpleado()
@@ -128,7 +135,7 @@ void Empleado::menuEmpleado()
     do{/*
         aqui mejor vender "Hotdog"
             */
-        cout<<"Menu de carrito de perritos calientes\n1)Preparar HotDog (insertar)\n2)Mostrar inventario y HotDogs preparados\n3)Vender HotDog (eliminar)\n4)Salir."<<endl;
+        cout<<"Menu de carrito de perritos calientes\n1)Preparar HotDog (insertar)\n2)Mostrar inventario y HotDogs preparados\n3)Vender HotDog (eliminar)\n4)Check-in\n5)Salir."<<endl;
         cin>>opc;
         system("cls");
         switch(opc){
@@ -146,7 +153,14 @@ void Empleado::menuEmpleado()
                 instancia->eliminarHotdogInicio();
                 break;
             }
-            case 4:{
+            case 4:
+                float hora;
+                cout<<"Ingrese la hora de entrada: "<<endl;
+                cin>>hora;
+                arbol->insertar(hora);
+                arbol->recorridoInOrder();
+                break;
+            case 5:{
                 cout<<"Saliendo...\n";
                 break;
             }
@@ -155,7 +169,7 @@ void Empleado::menuEmpleado()
                 break;
             }
         }
-    }while(opc!=4);
+    }while(opc!=5);
 }
 
 void Empleado::setInventario(Hotdog *inventarioCompartido)
@@ -163,7 +177,169 @@ void Empleado::setInventario(Hotdog *inventarioCompartido)
     instancia = inventarioCompartido;
 }
 
-void Empleado::quicksort()
-{
-    //pendiente para hacerlo con texto chuy
+void Empleado::guardarEmpleadosArchivo() {
+    ofstream archivo("Empleados.txt");
+    if (!archivo.is_open()) {
+        cout << "Error al abrir el archivo para guardar." << endl;
+    }else{
+        Nodo* aux = inicio;
+        do {
+            archivo << aux->getId() << " " << aux->getNombre() << endl;
+            aux = aux->sig;
+        } while (aux != inicio);
+
+        archivo.close();
+        cout << "Empleados guardados correctamente en 'Empleados.txt'" << endl;
+    }
+
+
+}
+
+void Empleado::cargarEmpleados() {
+    ifstream archivo("Empleados.txt");
+    if (!archivo.is_open()) {
+        cout << "No se encontro el archivo de empleados. Se creara uno nuevo al guardar." << endl;
+        return;
+    }
+
+    int id;
+    string nombre;
+
+    while (archivo >> id >> ws && getline(archivo, nombre)) {
+        Nodo* nuevo = new Nodo(nombre, id);
+        if (inicio == nullptr) {
+            inicio = nuevo;
+            nuevo->sig = nuevo;
+            nuevo->ant = nuevo;
+        } else {
+            nuevo->sig = inicio;
+            nuevo->ant = inicio->ant;
+            inicio->ant->sig = nuevo;
+            inicio->ant = nuevo;
+        }
+    }
+
+    archivo.close();
+    cout << "Empleados cargados correctamente desde 'Empleados.txt'" << endl;
+}
+
+
+void Empleado::shellsort() {
+
+    if (inicio == nullptr) {
+        cout << "Lista vacía.\n";
+        return;
+    }
+
+    // Paso 1: Contar los nodos
+    int contador = 1;
+    Nodo* aux = inicio->sig;
+    while (aux != inicio) {
+        contador++;
+        aux = aux->sig;
+    }
+
+    // Paso 2: Crear arreglo de punteros a Nodo
+    Nodo** nodos = new Nodo*[contador];
+    aux = inicio;
+    for (int i = 0; i < contador; i++) {
+        nodos[i] = aux;
+        aux = aux->sig;
+    }
+
+    // Paso 3: Shell Sort por ID
+    for (int gap = contador / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < contador; i++) {
+            Nodo* temp = nodos[i];
+            int j;
+            for (j = i; j >= gap && nodos[j - gap]->getId() > temp->getId(); j -= gap) {
+                nodos[j] = nodos[j - gap];
+            }
+            nodos[j] = temp;
+        }
+    }
+
+    // Paso 4: Reconstruir los enlaces (sig y ant)
+    for (int i = 0; i < contador; i++) {
+        nodos[i]->sig = nodos[(i + 1) % contador];
+        nodos[i]->ant = nodos[(i - 1 + contador) % contador];
+    }
+
+    // Paso 5: Actualizar inicio
+    inicio = nodos[0];
+
+    // Paso 6: Liberar memoria del arreglo (no los nodos)
+    delete[] nodos;
+
+    cout << "Lista ordenada exitosamente por ID (Shell Sort).\n";
+     Nodo* temp = inicio;
+    do {
+        cout << "ID: " << temp->getId() << ", Nombre: " << temp->getNombre() << endl;
+        temp = temp->sig;
+    } while (temp != inicio);
+
+}
+
+void Empleado::busquedaBinaria(){
+
+    if (inicio == nullptr) {
+        cout << "Lista vacia.\n";
+        return;
+    }
+
+    // Paso 1: Contar los nodos
+    int contador = 1;
+    Nodo* aux = inicio->sig;
+    while (aux != inicio) {
+        contador++;
+        aux = aux->sig;
+    }
+
+    // Paso 2: Crear arreglo de punteros a Nodo
+    Nodo** nodos = new Nodo*[contador];
+    aux = inicio;
+    for (int i = 0; i < contador; i++) {
+        nodos[i] = aux;
+        aux = aux->sig;
+    }
+
+    // Paso 3: Shell Sort por ID
+    for (int gap = contador / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < contador; i++) {
+            Nodo* temp = nodos[i];
+            int j;
+            for (j = i; j >= gap && nodos[j - gap]->getId() > temp->getId(); j -= gap) {
+                nodos[j] = nodos[j - gap];
+            }
+            nodos[j] = temp;
+        }
+    }
+
+    // Paso 4: Reconstruir los enlaces (sig y ant)
+    for (int i = 0; i < contador; i++) {
+        nodos[i]->sig = nodos[(i + 1) % contador];
+        nodos[i]->ant = nodos[(i - 1 + contador) % contador];
+    }
+
+    // Paso 5: Actualizar inicio
+    inicio = nodos[0];
+
+    int numeroBuscado=0;
+    cout<<"Ingrese el ID a buscar: ";
+    cin>>numeroBuscado;
+
+    int i=0;
+    while(i<=contador){
+        int medio=(i+contador)/2;
+        if(nodos[medio]->getId()==numeroBuscado){
+            cout<<"Empleado encontrado: "<<nodos[medio]->getId()<<" en la posicion: "<<medio+1<<endl;
+            cout<<"Empleado encontrado: "<<nodos[medio]->getNombre()<<endl;
+            return;
+        }else if(numeroBuscado<nodos[medio]->getId()){
+            contador=medio-1;
+        }else{
+            i=medio+1;
+        }
+    }
+    cout<<"Numero no encontrado, busque por otro\n";
 }

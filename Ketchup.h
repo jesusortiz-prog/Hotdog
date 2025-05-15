@@ -3,8 +3,10 @@
 
 #include "Pan.h"
 #include "Ketchup.h"
-#include "Nodo.h"
-// CAMBIAR A OTRO TIPO DE LISTA
+//#include "Nodo.h"
+
+#define MAX 10
+
 class Ketchup //pila doblemente ligada circular con encabezados
 {
     public:
@@ -16,8 +18,9 @@ class Ketchup //pila doblemente ligada circular con encabezados
         void mostrarKetchup();
 
         void eliminarKetchupFinal();
-
         Nodo* getInicio();
+
+
 
     protected:
 

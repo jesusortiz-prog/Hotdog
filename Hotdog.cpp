@@ -41,7 +41,7 @@ void Hotdog::insertarHotdogFinal()//Preparar hotdog
         }
         ketchup.eliminarKetchupFinal();
         pan.eliminarPanFinal();
-        salchicha.eliminarSalchicha();
+        salchicha.eliminarSalchicha(); //elimina el inicio
     }
     else{
         cout<<"No hay ingredientes suficientes"<<endl;
@@ -83,7 +83,7 @@ void Hotdog::mostrarHotdogs()
         aux=aux->sig;
         contador++;
     }while(aux!=inicio);
-    cout<<"Hay "<<contador<<" salichas listas para vender."<<endl;
+    cout<<"Hay "<<contador<<" salchichas listas para vender."<<endl;
     return;
 }
 void Hotdog::eliminarHotdogInicio()
