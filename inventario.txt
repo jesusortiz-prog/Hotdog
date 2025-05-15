@@ -1,4 +1,6 @@
-Salchichas: 3
-Panes: 4
-Ketchup: 7
-Hotdog: 0
+Salchichas: 10
+Panes: 7
+Ketchup: 4
+Hotdog: 4
+Ultimo numero de ticket: 4
+Dinero total: 59.96

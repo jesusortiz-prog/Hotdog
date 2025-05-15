@@ -411,3 +411,104 @@
 	<string>
 	<fstream>
 
+1747291568 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\arbol.cpp
+	"Arbol.h"
+	<iostream>
+
+1747291313 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\arbol.h
+
+1747347005 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Caja.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+	<iomanip>
+
+1747346121 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Caja.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1747288379 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1747288379 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1747346282 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	"Arbol.h"
+	"Caja.h"
+	<string>
+	<iostream>
+
+1747288379 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1747288379 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747347105 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	"Arbol.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+	<fstream>
+
+1747346198 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\caja.h
+
+1747346978 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\caja.cpp
+	<iostream>
+	"Caja.h"
+

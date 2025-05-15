@@ -36,6 +36,8 @@
 		</Compiler>
 		<Unit filename="Arbol.cpp" />
 		<Unit filename="Arbol.h" />
+		<Unit filename="Caja.cpp" />
+		<Unit filename="Caja.h" />
 		<Unit filename="Empleado.cpp" />
 		<Unit filename="Empleado.h" />
 		<Unit filename="Gerente.cpp" />

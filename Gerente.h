@@ -2,7 +2,7 @@
 #define GERENTE_H
 
 #include "Hotdog.h"
-
+#include "Caja.h"
 #include "Nodo.h"
 #include "Empleado.h"
 
@@ -19,6 +19,7 @@ class Gerente
         ~Gerente();
         Empleado empleado;
         Hotdog hotdog;
+        Caja caja;
 
         void menuGerente();
 

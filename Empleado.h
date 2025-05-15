@@ -4,6 +4,7 @@
 #include "Nodo.h"
 #include "Hotdog.h"
 #include "Arbol.h"
+#include "Caja.h"
 #include <string>
 #include <iostream>
 
@@ -17,6 +18,7 @@ class Empleado
 
         Hotdog *instancia;
         Arbol *arbol;
+        Caja *caja;
 
         bool vacia();
 
@@ -28,7 +30,7 @@ class Empleado
 
         void menuEmpleado();
 
-        void setInventario(Hotdog*);
+        void setInventario(Hotdog*,Caja*);
 
         void guardarEmpleadosArchivo();
         void cargarEmpleados();

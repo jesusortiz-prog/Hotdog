@@ -1,6 +1,6 @@
 #include "Gerente.h"
 #include "Empleado.h"
-
+#include "Caja.h"
 #include "Hotdog.h"//hotdog
 #include "Pan.h"
 #include "Ketchup.h"
@@ -14,7 +14,7 @@ const int Gerente::NUM_CIUDADES = 4;
 
 Gerente::Gerente()
 {
-    empleado.setInventario(&hotdog);
+    empleado.setInventario(&hotdog,&caja);
     cargarInventario();
     empleado.cargarEmpleados();
 
@@ -70,7 +70,7 @@ void Gerente::subEmpleados(){
 void Gerente::subInventario(){
     int opc;
     do{
-        cout<<"1)Mostrar cantidad de salchichas,\n\t\t\tPanes,\n\t\t\tSobres de ketchup.\n2)Ingresar salchicas\n3)Ingresar Pan\n4)Ingresar ketchup\n5)Volver\n";
+        cout<<"1)Mostrar cantidad de salchichas,\n\t\t\tPanes,\n\t\t\tSobres de ketchup.\n2)Ingresar salchicas\n3)Ingresar Pan\n4)Ingresar ketchup\n5)Mostrar tickets y total\n6)Eliminar tickets\n7)Volver\n";
         cin>>opc;
         system("cls");
         switch(opc){
@@ -87,6 +87,12 @@ void Gerente::subInventario(){
             hotdog.ketchup.ingresarKetchupFinal();
             break;
         case 5:
+            caja.mostrar();
+            break;
+        case 6:
+            caja.eliminar();
+            break;
+        case 7:
             cout<<"volviendo...\n";
             guardarInventario();
             break;
@@ -95,7 +101,7 @@ void Gerente::subInventario(){
             break;
         }
 
-    }while(opc!=5);
+    }while(opc!=7);
 
 }
 void Gerente::menuGerente() //agregrar do while a cada case
@@ -174,6 +180,10 @@ void Gerente::guardarInventario(){
     }
     archivo<<"Hotdog: "<<contador<<endl;
 
+    //Guardar caja
+    archivo<<"Ultimo numero de ticket: "<<caja.numticket<<endl;
+    archivo<<"Dinero total: "<<caja.total<<endl;
+
     archivo.close();
     cout<<"Inventario guardado."<<endl;
 }
@@ -187,6 +197,7 @@ void Gerente::cargarInventario() {
 
     string linea;
     int cantidad;
+    float totald;
 
     //leer salchichas
     getline(archivo,linea);
@@ -212,6 +223,14 @@ void Gerente::cargarInventario() {
     for (int i=0;i<cantidad;i++){
         hotdog.cargarHotdog();
     }
+
+    //leer caja
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":")+1))>>cantidad;
+    caja.numticket=cantidad;
+    getline(archivo,linea);
+    istringstream(linea.substr(linea.find(":")+1))>>totald;
+    caja.total=totald;
 
     archivo.close();
     cout << "Inventario cargado correctamente desde archivo." << endl;

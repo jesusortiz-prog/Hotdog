@@ -149,6 +149,7 @@ void Empleado::menuEmpleado()
             }
             case 3:{
                 instancia->eliminarHotdogInicio();
+                caja->insertar();
                 break;
             }
             case 4:{
@@ -182,12 +183,13 @@ void Empleado::menuEmpleado()
                 break;
             }
         }
-    }while(opc!=4);
+    }while(opc!=6);
 }
 
-void Empleado::setInventario(Hotdog *inventarioCompartido)
+void Empleado::setInventario(Hotdog *inventarioCompartido,Caja *caja)
 {
-    instancia = inventarioCompartido;
+    instancia=inventarioCompartido;
+    this->caja=caja;
 }
 
 void Empleado::guardarEmpleadosArchivo() {
