@@ -1,0 +1,615 @@
+# depslib dependency file v1.0
+1745305502 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.h
+	"Nodo.h"
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.h
+	<iostream>
+	<string>
+
+1745304488 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.h
+	"Nodo.h"
+	<string>
+	<iostream>
+	"Nodo.h"
+
+1745306092 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1745377367 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+
+1745378536 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+
+1745306295 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1745378556 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.cpp
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Nodo.h"
+
+1745378451 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1745377885 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.h
+	"Nodo.h"
+
+1745378424 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1745378442 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\pan.h
+	"Nodo.h"
+
+1745798394 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+
+1745798408 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	<string>
+	<iostream>
+
+1745796355 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\nodo.h
+	<iostream>
+	<string>
+
+1745798315 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1745796288 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1745798449 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+
+1745378442 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\pan.h
+	"Nodo.h"
+
+1745798623 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+	"Nodo.h"
+
+1745798333 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1745795817 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1745305502 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1745796349 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1745796393 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1745797910 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\include\salchicha.h
+	"Nodo.h"
+
+1745798470 d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\salchicha.h
+	"Nodo.h"
+
+1745798475 source:d:\stuff\escuela\trabajos\info 4to\hotdog-aportechuy02\hotdog-aportechuy02\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1746748105 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+
+1746746642 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	<string>
+	<iostream>
+
+1746746048 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1746751263 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1746750680 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1746750783 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+	"Nodo.h"
+
+1746750671 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1746750377 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1746751272 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+
+1746751249 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1746750750 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1746750885 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1746746048 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1746750707 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1746750638 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747274106 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+	<fstream>
+
+1747274106 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	<string>
+	<iostream>
+
+1747192697 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1746820375 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1746820375 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1747194011 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+
+1746820375 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1747275942 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1747275819 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+	<iomanip>
+
+1747189279 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1747194011 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1746820375 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1747192686 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1746820375 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1746820375 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747290762 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+	<iomanip>
+
+1747288379 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1747288379 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1747288380 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1747288380 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1747288379 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+
+1747288380 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1747288914 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	"Arbol.h"
+	<string>
+	<iostream>
+
+1747291313 c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\arbol.h
+
+1747288379 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1747288379 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1747288380 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1747288380 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1747288380 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1747288380 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747291172 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\arbol.cpp
+	"Arbol.h"
+	<iostream>
+
+1747291258 source:c:\users\pepe_\downloads\hotdog-aportechuy02\hotdog-aportechuy02\proyecto\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	"Arbol.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+	<fstream>
+
+1747291568 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\arbol.cpp
+	"Arbol.h"
+	<iostream>
+
+1747291313 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\arbol.h
+
+1747347005 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Caja.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+	<iomanip>
+
+1747346121 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Caja.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1747288379 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1747288379 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+
+1747288380 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1747346282 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	"Arbol.h"
+	"Caja.h"
+	<string>
+	<iostream>
+
+1747288379 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1747288379 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1747288380 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747347105 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	"Arbol.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+	<fstream>
+
+1747346198 d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\caja.h
+
+1747346978 source:d:\stuff\escuela\trabajos\info 4to\hotdog-patch-1\caja.cpp
+	<iostream>
+	"Caja.h"
+
+1747365411 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\arbol.cpp
+	"Arbol.h"
+	<iostream>
+
+1747363361 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\arbol.h
+
+1747365443 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\caja.cpp
+	<iostream>
+	"Caja.h"
+
+1747365411 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\caja.h
+
+1747369997 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\empleado.cpp
+	"Empleado.h"
+	"Hotdog.h"
+	"Gerente.h"
+	"Arbol.h"
+	<cstdlib>
+	<string>
+	<iostream>
+	<string>
+	<fstream>
+
+1747363361 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\empleado.h
+	"Nodo.h"
+	"Hotdog.h"
+	"Arbol.h"
+	"Caja.h"
+	<string>
+	<iostream>
+
+1747368895 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\nodo.h
+	<iostream>
+	<string>
+
+1747363361 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\hotdog.h
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+	"Salchicha.h"
+
+1747363361 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\pan.h
+	"Nodo.h"
+
+1747364396 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\ketchup.h
+	"Pan.h"
+	"Ketchup.h"
+
+1747363361 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\salchicha.h
+	"Nodo.h"
+
+1747368895 c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\gerente.h
+	"Hotdog.h"
+	"Caja.h"
+	"Nodo.h"
+	"Empleado.h"
+	<string>
+	<iostream>
+
+1747369997 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\gerente.cpp
+	"Gerente.h"
+	"Empleado.h"
+	"Caja.h"
+	"Hotdog.h"
+	"Pan.h"
+	"Ketchup.h"
+	<cstdlib>
+	<fstream>
+	<sstream>
+	<iomanip>
+
+1747366057 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\hotdog.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Pan.h"
+	"Ketchup.h"
+
+1747363361 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\ketchup.cpp
+	"Ketchup.h"
+	"Nodo.h"
+
+1747369997 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\main.cpp
+	"Hotdog.h"
+	"Nodo.h"
+	"Empleado.h"
+	"Gerente.h"
+	<string>
+	<iostream>
+
+1747363361 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\pan.cpp
+	"Pan.h"
+	"Nodo.h"
+
+1747363361 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\salchicha.cpp
+	"Salchicha.h"
+	"Nodo.h"
+
+1747363574 source:c:\users\jesus\onedrive - universidad de guadalajara\datosestructurados\proyecto\hotdog-patch-1 (1)\hotdog-patch-1\nodo.cpp
+	"Nodo.h"
+	<iostream>
+
